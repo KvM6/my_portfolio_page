@@ -1,0 +1,22 @@
+@use "../utilities/mixins";
+
+
+.bg {
+	position: relative;
+	height: 100vh;
+
+	.text-elements {
+		.header-title {
+			font-family: "Yeseva One", cursive, sans-serif;
+			font-size: 3rem;
+		}
+
+        .header-text {
+			@include mixins.sectionText;
+            margin: 1em 0;
+        }
+        .header-text:last-child {
+            font-weight: bold;
+        }
+	}
+}

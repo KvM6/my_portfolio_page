@@ -1,0 +1,50 @@
+@use "../base/colors";
+
+// SECTION
+
+.section-title {
+	padding: 0 2em;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.front-card {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: colors.$light;
+	border: 1px solid gainsboro;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px #2e2e2e2e;
+}
+
+.font-bg {
+	display: block;
+	height: 6em;
+	width: 6em;
+	border-radius: 50%;
+	background-color: colors.$second;
+    transition: transform 0.3s, background-color 0.3s;
+
+	i {
+		font-size: 3rem;
+		color: colors.$dark;
+	}
+}
+
+.color-block-main {
+	position: relative;
+	top: -10px;
+	height: 30vh;
+	width: 100%;
+	background-color: colors.$main;
+}
+.color-block-light {
+	position: relative;
+	top: -10px;
+	height: 20vh;
+	width: 100%;
+	background-color: colors.$light;
+}

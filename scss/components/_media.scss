@@ -1,0 +1,181 @@
+@use "../utilities/mixins";
+
+@use "../vendor/bootstrap";
+
+@use "../base/reset";
+@use "../base/colors";
+@use "../base/base";
+
+@use "./components";
+
+@media (min-width: 576px) {
+	.navbar {
+		.nav {
+			.nav-link {
+				margin: 0 5vw;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	// BOOTSTRAP
+
+	.btn {
+		font-size: 2rem;
+	}
+
+	.form {
+		padding: 0 2em;
+		max-width: 705px;
+
+		input,
+		textarea {
+			font-size: 2rem;
+		}
+	}
+
+	// COMPONENTS
+
+	.section-title {
+		padding: 0 3em;
+		font-size: 2.4rem;
+	}
+
+	.fontBg {
+		height: 8em;
+		width: 8em;
+
+		i {
+			font-size: 3.6rem;
+		}
+	}
+
+	.color-block-main {
+		height: 20vh;
+	}
+	.color-block-light {
+		height: 20vh;
+	}
+
+	// NAVIGATION
+
+	// HEADER
+
+	.bg {
+		.text-elements {
+			.header-title {
+				font-size: 3.6rem;
+			}
+		}
+	}
+
+	// ABOUT ME
+
+	.about-me {
+		.about-me-text {
+			margin: 2em 0;
+			margin-bottom: 8em;
+		}
+	}
+
+	// SKILLS
+
+	.skills {
+		.skill-title {
+			font-size: 2.4rem;
+		}
+
+		.skill-text {
+			height: 30em;
+			.text-title {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	// MY WORKS
+
+	.my-works {
+		.my-works-block {
+			height: 30vh;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	// BOOTSTRAP
+
+	.btn {
+		font-size: 2.4rem;
+	}
+
+	.form {
+		input,
+		textarea {
+			font-size: 2.4rem;
+		}
+	}
+
+	// COMPONENTS
+
+	.section-title {
+		font-size: 3rem;
+	}
+
+	.color-block-main {
+		height: 30vh;
+	}
+	.color-block-light {
+		height: 20vh;
+	}
+
+	// NAVIGATION
+
+	nav {
+		height: 85px;
+	}
+
+
+	// HEADER
+
+	.bg {
+		.text-elements {
+			.header-title {
+				font-size: 4.2rem;
+			}
+		}
+	}
+
+	// ABOUT ME
+
+	.about-me {
+		.about-me-text {
+			margin-bottom: 4em;
+		}
+	}
+
+	// SKILLS
+
+	.skills {
+		.skill-title {
+			font-size: 3rem;
+		}
+
+		.skill-text {
+			.text-title {
+				font-size: 2.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	// MY WORKS
+
+	.my-works {
+		.my-works-block {
+			height: 50vh;
+		}
+	}
+}

@@ -1,0 +1,150 @@
+@use "../utilities/mixins";
+
+@use "../base/colors";
+
+// ABOUT ME
+
+.about-me {
+	display: block;
+	background-color: colors.$main;
+
+	.about-me-text {
+		@include mixins.sectionText;
+		margin: 2em 0;
+		text-align: center;
+		margin-bottom: 5em;
+	}
+}
+
+// SKILLS
+
+.skills {
+	position: relative;
+	margin-top: -14em;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	.skill-title {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	.skill-text {
+		@include mixins.sectionText;
+
+		.text-title {
+			color: colors.$main;
+			font-size: 1.8rem;
+		}
+	}
+}
+
+// MY WORKS
+
+.my-works {
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+
+	.work-card {
+		@include mixins.workCard;
+		@include mixins.sectionText;
+		position: relative;
+		display: block;
+		margin: 0.5em 0;
+		height: 12em;
+		max-width: 100%;
+		transition: transform 0.3s;
+
+		.work-title {
+			@include mixins.workTitle;
+			position: absolute;
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
+
+		.work-text {
+			position: absolute;
+			padding: 0 1em;
+			color: colors.$light;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+		a {
+			position: absolute;
+			top: 70%;
+			text-decoration: none;
+			.btn {
+				color: colors.$light;
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+		}
+	}
+
+	.my-works-block {
+		height: 40vh;
+		.more-soon {
+			@include mixins.sectionText;
+		}
+	}
+
+	.work-card:hover {
+		transform: scale(0.95);
+	}
+
+	.work-card:hover .work-text {
+		opacity: 1;
+	}
+
+	.work-card:hover .work-title {
+		opacity: 0;
+	}
+	.work-card:hover .btn {
+		opacity: 1;
+	}
+	.kvm {
+		@include mixins.workImg("../img/schron.JPG");
+	}
+	.paradise {
+		@include mixins.workImg("../img/tropical.JPG");
+	}
+	.photography {
+		@include mixins.workImg("../img/nbphoto.JPG")
+	}
+}
+
+// CONTACT
+
+.contact {
+	background-color: colors.$main;
+
+	.contact-text {
+		@include mixins.sectionText;
+	}
+
+	.btn {
+		float: right;
+	}
+}
+
+// PROFILES
+
+.profiles {
+	margin-bottom: 5em;
+	.profiles-text {
+		@include mixins.sectionText;
+	}
+
+	.profiles-card {
+		max-width: 40em;
+		a {
+			text-decoration: none;
+		}
+
+		a:hover .font-bg {
+			transform: scale(0.9);
+			background-color: colors.$main;
+		}
+	}
+}

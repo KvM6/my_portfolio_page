@@ -1,0 +1,28 @@
+@use "../base/colors";
+@use "../utilities/mixins";
+
+// GLOBALL
+
+.btn {
+	font-size: 1.6rem;
+	color: colors.$dark;
+	background-color: transparent;
+	border: 1px solid colors.$main;
+	border-radius: 8px;
+}
+
+.btn:hover {
+	background-color: colors.$main;
+}
+
+// CONTACT
+
+.form {
+	@include mixins.sectionText;
+	padding: 0 2em;
+
+	input,
+	textarea {
+		font-size: 1.6rem;
+	}
+}

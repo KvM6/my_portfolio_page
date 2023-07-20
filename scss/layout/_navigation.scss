@@ -1,0 +1,88 @@
+@use "../base/reset";
+@use "../base/colors";
+@use "../base/base";
+
+.navbar {
+	background-color: colors.$light;
+	width: 100%;
+
+	.navbar-brand {
+		padding: 0.5em;
+		font-size: 3rem;
+		color: colors.$dark;
+		border: none;
+	}
+
+	i {
+		transition: color 0.3s;
+	}
+
+	.navbar-brand:hover i {
+		color: colors.$main;
+	}
+
+	.hamburger {
+		padding: 1em;
+		font-size: 2rem;
+		border-radius: 8px;
+
+		&-inner,
+		&-inner::before,
+		&-inner::after {
+			background-color: colors.$dark;
+		}
+	}
+
+	.nav-link {
+		padding: 0.5em;
+		font-size: 2rem;
+		color: colors.$dark;
+		transition: color 0.3s;
+	}
+
+	.nav-link:hover {
+		color: colors.$main;
+	}
+
+	.nav {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		top: 8em;
+		right: 0;
+		width: 100%;
+		padding: 2em 2em;
+		border-bottom: 1px solid gainsboro;
+		background-color: #f0ebe5e0;
+		transform: translateX(120%);
+		transition: transform 0.6s;
+		// opacity: 0;
+		
+		.nav-link {
+			margin: 0 2vw;
+			display: flex;
+			justify-content: end;
+		}
+	}
+	.mobile-active {
+		transform: translateX(0);
+		// opacity: 1;
+	}
+
+	.active {
+		color: colors.$main;
+	}
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(150%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.nav-links-animation {
+	animation: navItemsAnimation 1s both;
+}

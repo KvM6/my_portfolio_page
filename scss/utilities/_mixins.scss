@@ -1,0 +1,62 @@
+@use "../base/colors";
+
+
+
+@mixin sectionText {
+	font-size: 1.6rem;
+	padding: 0 2em;
+    color: colors.$dark;
+
+    @media (min-width: 768px) {
+        font-size: 2rem;
+        padding: 0 3em;
+    }
+    @media (min-width: 992px) {
+        font-size: 2.4rem;
+        padding: 0 4em;
+    }
+}
+
+// SKILLS
+
+@mixin skillCard {
+	display: block;
+	height: 100%;
+	width: 100%;
+	background-color: colors.$light;
+	border: 1px solid gainsboro;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px #2e2e2e2e;
+}
+
+// MY WORKS 
+
+@mixin workCard {
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+}
+
+@mixin workTitle {
+    padding: 1em 0;
+    font-family: "Yeseva One", cursive, sans-serif;
+    font-size: 2.4rem;
+    text-shadow: 1px 1px 1px colors.$dark;
+    color: colors.$light;
+
+    @media (min-width: 768px) {
+        font-size: 3rem;
+    }
+    @media (min-width: 992px) {
+        font-size: 3.6rem;
+    }
+}
+
+@mixin workImg ($bgImg) {
+    background-image: colors.$maskPrimary, url($bgImg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+

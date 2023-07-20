@@ -1,0 +1,12 @@
+@use "./colors";
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    position: relative;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: colors.$dark;
+    background-color: colors.$light;
+}
